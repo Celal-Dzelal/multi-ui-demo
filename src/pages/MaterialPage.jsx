@@ -63,33 +63,26 @@ const DemoMaterial = () => {
           }}
         />
       </Paper>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
+      <Box sx={{ flexGrow: 1, padding: 2 }}>
+        <Grid container spacing={3}>
           {Array.from(Array(4)).map((_, index) => (
-            <Grid key={index} size={{ xs: 1, sm: 3, md: 3 }} className="p-3">
-              <Card sx={{ maxWidth: 345 }}>
+            <Grid item key={index} xs={12} sm={6} md={3}>
+              <Card sx={{ maxWidth: "100%" }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="140"
+                    height="160"
                     image="https://cdn.pixabay.com/photo/2017/08/16/14/21/psychology-2647941_1280.jpg"
-                    alt="green iguana"
+                    alt="psychology"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      Lizard
+                    <Typography gutterBottom variant="h6" component="div">
+                      Psychology
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{ color: "text.secondary" }}
-                    >
+                    <Typography variant="body2" color="text.secondary">
                       Lizards are a widespread group of squamate reptiles, with
                       over 6,000 species, ranging across all continents except
-                      Antarctica
+                      Antarctica.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
